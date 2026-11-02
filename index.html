@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santiago's Cabeleireiros | Salão de Beleza & Estética Capilar em Campo Grande - RJ</title>
+  <meta name="description" content="Salão de beleza referência na Estrada do Mendanha, Campo Grande RJ. Cortes exclusivos, mechas, escovas, químicas e tratamentos capilares com nota 4.7 no Google. Agende pelo WhatsApp!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0D0D11;
+      --bg-card: #15151B;
+      --bg-card-hover: #1E1E26;
+      --border-color: #272733;
+      --gold-primary: #D4AF37;
+      --gold-light: #F3E5AB;
+      --gold-hover: #B89628;
+      --gold-glow: rgba(212, 175, 55, 0.28);
+      --text-white: #FFFFFF;
+      --text-gray: #A1A1AA;
+      --text-muted: #71717A;
+      --accent-green: #25D366;
+      --accent-green-hover: #20BA56;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --radius-pill: 50px;
+      --font-title: 'Cinzel', serif;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Top Social Proof Bar */
+    .top-bar {
+      background: linear-gradient(90deg, #8C6D23 0%, #D4AF37 50%, #C59B27 100%);
+      color: #000;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 8px 15px;
+      letter-spacing: 0.4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(13, 13, 17, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 1000;
+      padding: 16px 0;
+    }
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-white);
+    }
+    .logo-badge {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, #F3E5AB, #D4AF37, #997B1E);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-title);
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: #0D0D11;
+      box-shadow: 0 4px 16px var(--gold-glow);
+    }
+    .brand-text h1 {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+    .brand-text span {
+      font-size: 0.72rem;
+      color: var(--gold-primary);
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .btn-header-zap {
+      background: var(--accent-green);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.28);
+      transition: all 0.25s ease;
+    }
+    .btn-header-zap:hover {
+      background: var(--accent-green-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 70px 0 60px;
+      background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 65%);
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 6px 16px;
+      border-radius: var(--radius-pill);
+      font-size: 0.85rem;
+      color: var(--gold-light);
+      margin-bottom: 22px;
+      font-weight: 600;
+    }
+    .hero-title {
+      font-family: var(--font-title);
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      line-height: 1.2;
+      font-weight: 700;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
+    .hero-title span {
+      background: linear-gradient(135deg, #FFFFFF 20%, #F3E5AB 60%, #D4AF37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.18rem);
+      color: var(--text-gray);
+      max-width: 680px;
+      margin: 0 auto 32px;
+      font-weight: 400;
+    }
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .btn-main-zap {
+      background: linear-gradient(135deg, #25D366, #1EBE5B);
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      font-weight: 700;
+      padding: 16px 36px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 10px 28px rgba(37, 211, 102, 0.35);
+      transition: all 0.3s ease;
+    }
+    .btn-main-zap:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 14px 34px rgba(37, 211, 102, 0.5);
+    }
+    .btn-sub-maps {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .btn-sub-maps:hover {
+      color: #FFFFFF;
+      text-decoration: underline;
+    }
+
+    /* Trust Stats Grid */
+    .trust-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .trust-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.25s, border-color 0.25s;
+    }
+    .trust-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(212, 175, 55, 0.4);
+    }
+    .trust-card .metric {
+      font-family: var(--font-title);
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      margin-bottom: 4px;
+    }
+    .trust-card .label {
+      font-size: 0.88rem;
+      color: var(--text-gray);
+      font-weight: 500;
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      margin: 70px 0 45px;
+    }
+    .section-tag {
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .section-title {
+      font-family: var(--font-title);
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .section-desc {
+      color: var(--text-gray);
+      font-size: 0.98rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 22px;
+    }
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .service-card:hover {
+      background: var(--bg-card-hover);
+      border-color: rgba(212, 175, 55, 0.45);
+      transform: translateY(-4px);
+    }
+    .service-card:hover::before {
+      opacity: 1;
+    }
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+    .service-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.22rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #FFFFFF;
+    }
+    .service-card p {
+      font-size: 0.92rem;
+      color: var(--text-gray);
+      line-height: 1.55;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+    .service-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      color: var(--gold-light);
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 10px 16px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+    .service-btn:hover {
+      background: var(--accent-green);
+      border-color: var(--accent-green);
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* Google Reviews Section */
+    .reviews-section {
+      background: #111116;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 60px 0;
+      margin-top: 70px;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .review-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+    .review-stars {
+      color: #F59E0B;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 2px;
+    }
+    .review-text {
+      font-size: 0.94rem;
+      color: var(--text-gray);
+      font-style: italic;
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .review-avatar {
+      width: 36px;
+      height: 36px;
+      background: #272733;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--gold-primary);
+      font-size: 0.9rem;
+    }
+    .review-author-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #FFFFFF;
+    }
+    .review-badge {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* Location & Hours Card */
+    .info-container {
+      margin: 70px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .info-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+    .info-box h3 {
+      font-family: var(--font-heading);
+      font-size: 1.28rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-light);
+    }
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    .hours-table tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .hours-table tr:last-child {
+      border-bottom: none;
+    }
+    .hours-table td {
+      padding: 10px 0;
+      color: var(--text-gray);
+    }
+    .hours-table td.day {
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+    .hours-table td.time {
+      text-align: right;
+      color: var(--gold-primary);
+    }
+    .hours-table tr.closed td.time {
+      color: var(--text-muted);
+    }
+
+    .address-card {
+      color: var(--text-gray);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    .address-card strong {
+      color: #FFFFFF;
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+    }
+    .btn-maps-action {
+      margin-top: 20px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+    .btn-maps-action:hover {
+      background: var(--gold-primary);
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    /* Final CTA Banner */
+    .final-cta {
+      background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.16) 0%, rgba(21, 21, 27, 0.95) 70%);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 55px 30px;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    .final-cta h2 {
+      font-family: var(--font-title);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin-bottom: 16px;
+    }
+    .final-cta p {
+      color: var(--text-gray);
+      max-width: 580px;
+      margin: 0 auto 30px;
+      font-size: 1.02rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 30px 0 90px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    footer a {
+      color: var(--gold-primary);
+      text-decoration: none;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-zap {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent-green);
+      color: #FFFFFF;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      z-index: 9999;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .floating-zap:hover {
+      transform: scale(1.12);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.65);
+    }
+    .floating-zap svg {
+      width: 32px;
+      height: 32px;
+      fill: #FFFFFF;
+    }
+
+    @media (max-width: 768px) {
+      .hero { padding: 45px 0 40px; }
+      .hero-title { font-size: 1.85rem; }
+      .trust-strip { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .btn-main-zap { width: 100%; justify-content: center; font-size: 1rem; padding: 15px 24px; }
+      .btn-header-zap span { display: none; }
+      .btn-header-zap { padding: 10px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span>⭐ Salão com Nota 4.7 no Google Maps | Mais de 180 Clientes Satisfeitos em Campo Grande</span>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-nav">
+      <a href="#" class="brand-logo">
+        <div class="logo-badge">S</div>
+        <div class="brand-text">
+          <h1>Santiago's</h1>
+          <span>Cabeleireiros & Estética</span>
+        </div>
+      </a>
+      <a href="https://wa.me/5521964551946?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20do%20Santiago%27s%20Cabeleireiros%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20dispon%C3%ADveis." class="btn-header-zap" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span>Agendar Horário</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        ✨ Estrada do Mendanha, 660 • Campo Grande - RJ
+      </div>
+      <h2 class="hero-title">
+        Realce Sua Beleza com Quem é <span>Referência em Campo Grande</span>
+      </h2>
+      <p class="hero-subtitle">
+        Cortes exclusivos, mechas impecáveis, tratamentos avançados e atendimento caloroso. Viva a experiência de cuidar do seu cabelo no salão avaliado com nota 4.7 no Google.
+      </p>
+      
+      <div class="hero-cta-group">
+        <a href="https://wa.me/5521964551946?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20do%20Santiago%27s%20Cabeleireiros%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20dispon%C3%ADveis." class="btn-main-zap" target="_blank" rel="noopener">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          Agendar Meu Horário no WhatsApp
+        </a>
+        <a href="https://maps.google.com/?cid=15691242361349408860" target="_blank" rel="noopener" class="btn-sub-maps">
+          📍 Ver localização na Estrada do Mendanha, 660 &rarr;
+        </a>
+      </div>
+
+      <!-- Trust Strip -->
+      <div class="trust-strip">
+        <div class="trust-card">
+          <div class="metric">4.7 ★</div>
+          <div class="label">Avaliação Média no Google</div>
+        </div>
+        <div class="trust-card">
+          <div class="metric">180+</div>
+          <div class="label">Avaliações & Clientes Felizes</div>
+        </div>
+        <div class="trust-card">
+          <div class="metric">100%</div>
+          <div class="label">Linha de Produtos Profissionais</div>
+        </div>
+        <div class="trust-card">
+          <div class="metric">Fácil</div>
+          <div class="label">Agendamento em 1 Toque</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="container" id="servicos">
+    <div class="section-header">
+      <span class="section-tag">Nossos Cuidados</span>
+      <h2 class="section-title">Serviços Feitos Sob Medida Para Você</h2>
+      <p class="section-desc">Conheça as principais especialidades do Santiago's Cabeleireiros. Clique no serviço desejado para agendar diretamente no WhatsApp.</p>
+    </div>
+
+    <div class="services-grid">
+      <!-- 1. Cortes Femininos -->
+      <div class="service-card">
+        <div>
+          <span class="service-icon">✂️</span>
+          <h3>Corte Feminino Personalizado</h3>
+          <p>Visagismo, corte em camadas, chanel, repicado, bordado e manutenção de pontas com finalização impecável.</p>
+        </div>
+        <a href="https://wa.me/5521964551946?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20Corte%20Feminino%20no%20Santiago%27s%20Cabeleireiros." class="service-btn" target="_blank" rel="noopener">
+          Consultar & Agendar &rarr;
+        </a>
+      </div>
+
+      <!-- 2. Mechas & Morena Iluminada -->
+      <div class="service-card">
+        <div>
+          <span class="service-icon">✨</span>
+          <h3>Mechas & Morena Iluminada</h3>
+          <p>Técnicas modernas de clareamento, balayage, mechas finas e contorno preservando a saúde e o brilho dos fios.</p>
+        </div>
+        <a href="https://wa.me/5521964551946?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20e%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20Mechas/Morena%20Iluminada." class="service-btn" target="_blank" rel="noopener">
+          Consultar & Agendar &rarr;
+        </a>
+      </div>
+
+      <!-- 3. Escova & Tratamentos -->
+      <div class="service-card">
+        <div>
+          <span class="service-icon">💨</span>
+          <h3>Escova Modeladora & Lisa</h3>
+          <p>Escovação duradoura com efeito sedoso e alinhado, ideal para o dia a dia, eventos e momentos especiais.</p>
+        </div>
+        <a href="https://wa.me/5521964551946?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio%20para%20Escova%20no%20Santiago%27s." class="service-btn" target="_blank" rel="noopener">
+          Consultar & Agendar &rarr;
+        </a>
+      </div>
+
+      <!-- 4. Botox & Progressiva -->
+      <div class="service-card">
+        <div>
+          <span class="service-icon">🌟</span>
+          <h3>Botox Capilar & Selagem</h3>
+          <p>Redução de volume e frizz com reposição de massa proteica, hidratação profunda e efeito liso natural.</p>
+        </div>
+        <a href="https://wa.me/5521964551946?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20Botox%20Capilar%20ou%20Selagem." class="service-btn" target="_blank" rel="noopener">
+          Consultar & Agendar &rarr;
+        </a>
+      </div>
+
+      <!-- 5. Coloração & Tonalização -->
+      <div class="service-card">
+        <div>
+          <span class="service-icon">🎨</span>
+          <h3>Coloração & Tonalização</h3>
+          <p>Cobertura perfeita de fios brancos, nuances vibrantes e matização de alta performance com marcas consagradas.</p>
+        </div>
+        <a href="https://wa.me/5521964551946?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20Colora%C3%A7%C3%A3o." class="service-btn" target="_blank" rel="noopener">
+          Consultar & Agendar &rarr;
+        </a>
+      </div>
+
+      <!-- 6. Hidratação & Nutrição -->
+      <div class="service-card">
+        <div>
+          <span class="service-icon">💧</span>
+          <h3>Cronograma & Nutrição Profunda</h3>
+          <p>Restauração intensiva para cabelos ressecados, quimicamente tratados ou sem brilho. Devolva vida aos seus fios.</p>
+        </div>
+        <a href="https://wa.me/5521964551946?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20Nutri%C3%A7%C3%A3o/Hidrata%C3%A7%C3%A3o%20no%20Santiago%27s." class="service-btn" target="_blank" rel="noopener">
+          Consultar & Agendar &rarr;
+        </a>
+      </div>
+
+      <!-- 7. Corte Masculino & Barba -->
+      <div class="service-card">
+        <div>
+          <span class="service-icon">💈</span>
+          <h3>Corte Masculino & Barbearia</h3>
+          <p>Cortes clássicos e modernos, acabamento preciso na navalha, barba alinhada e atendimento ágil.</p>
+        </div>
+        <a href="https://wa.me/5521964551946?text=Fala%20pessoal!%20Gostaria%20de%20agendar%20um%20Corte%20Masculino%20ou%20Barba." class="service-btn" target="_blank" rel="noopener">
+          Consultar & Agendar &rarr;
+        </a>
+      </div>
+
+      <!-- 8. Penteados & Produções -->
+      <div class="service-card">
+        <div>
+          <span class="service-icon">👑</span>
+          <h3>Penteados para Festas & Noivas</h3>
+          <p>Produções completas para formaturas, casamentos e aniversários, garantindo fixação e sofisticação.</p>
+        </div>
+        <a href="https://wa.me/5521964551946?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20Penteados%20para%20eventos." class="service-btn" target="_blank" rel="noopener">
+          Consultar & Agendar &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Reviews Section -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header" style="margin-top: 0;">
+        <span class="section-tag">Depoimentos Reais</span>
+        <h2 class="section-title">O Que Dizem Quem Já Frequenta</h2>
+        <p class="section-desc">Avaliações autênticas retiradas diretamente da nossa ficha no Google Maps.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Excelente atendimento! Profissionais super atenciosos, ambiente limpo, climatizado e o corte ficou exatamente como eu queria. Recomendo de olhos fechados em Campo Grande."</p>
+          <div class="review-author">
+            <div class="review-avatar">C</div>
+            <div>
+              <div class="review-author-name">Cliente Google</div>
+              <div class="review-badge">Avaliação Verificada ★ 5.0</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Sempre que preciso de uma escova e tratamento capilar venho aqui no Santiago's. Pontualidade, carinho no atendimento e o cabelo sai com um brilho incrível!"</p>
+          <div class="review-author">
+            <div class="review-avatar">M</div>
+            <div>
+              <div class="review-author-name">Frequentadora Local</div>
+              <div class="review-badge">Avaliação Verificada ★ 5.0</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Melhor salão da Estrada do Mendanha. Preço justo pelo padrão do serviço e equipe nota 10. Agendar pelo WhatsApp facilitou muito a minha rotina."</p>
+          <div class="review-author">
+            <div class="review-avatar">R</div>
+            <div>
+              <div class="review-author-name">Cliente da Região</div>
+              <div class="review-badge">Avaliação Verificada ★ 5.0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info & Opening Hours Section -->
+  <section class="container">
+    <div class="info-container">
+      <!-- Hours Box -->
+      <div class="info-box">
+        <h3>⏰ Horários de Atendimento</h3>
+        <table class="hours-table">
+          <tr class="closed">
+            <td class="day">Segunda-feira</td>
+            <td class="time">Fechado</td>
+          </tr>
+          <tr>
+            <td class="day">Terça-feira</td>
+            <td class="time">09:00 às 20:00</td>
+          </tr>
+          <tr>
+            <td class="day">Quarta-feira</td>
+            <td class="time">09:00 às 20:00</td>
+          </tr>
+          <tr>
+            <td class="day">Quinta-feira</td>
+            <td class="time">09:00 às 20:00</td>
+          </tr>
+          <tr>
+            <td class="day">Sexta-feira</td>
+            <td class="time">09:00 às 20:00</td>
+          </tr>
+          <tr>
+            <td class="day">Sábado</td>
+            <td class="time">09:00 às 20:00</td>
+          </tr>
+          <tr class="closed">
+            <td class="day">Domingo</td>
+            <td class="time">Fechado</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Address Box -->
+      <div class="info-box">
+        <h3>📍 Onde Estamos</h3>
+        <div class="address-card">
+          <strong>Santiago's Cabeleireiros</strong>
+          Estrada do Mendanha, 660 - Loja A<br>
+          Campo Grande, Rio de Janeiro - RJ<br>
+          CEP: 23087-285<br><br>
+          <em>Ponto de fácil acesso com estacionamento e conveniência nas proximidades.</em>
+        </div>
+        <a href="https://maps.google.com/?cid=15691242361349408860" target="_blank" rel="noopener" class="btn-maps-action">
+          🗺️ Abrir Rota no Google Maps &rarr;
+        </a>
+      </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="final-cta">
+      <h2>Pronto Para Cuidar do Seu Visual?</h2>
+      <p>Envie uma mensagem agora e reserve seu horário com a nossa equipe sem complicação.</p>
+      <a href="https://wa.me/5521964551946?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20do%20Santiago%27s%20Cabeleireiros%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20dispon%C3%ADveis." class="btn-main-zap" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        Falar com Santiago's no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Santiago's Cabeleireiros. Estrada do Mendanha, 660 - Campo Grande, RJ.</p>
+      <p style="margin-top: 6px; font-size: 0.75rem; opacity: 0.7;">Prévia de demonstração desenvolvida por <a href="https://pdi-breno-luiz.pdibreno.workers.dev" target="_blank" rel="noopener">Breno Luiz</a>.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/5521964551946?text=Ol%C3%A1!%20Vi%20a%20p%C3%A1gina%20do%20Santiago%27s%20Cabeleireiros%20e%20gostaria%20de%20consultar%20hor%C3%A1rios%20dispon%C3%ADveis." class="floating-zap" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+</body>
+</html>
